@@ -1,0 +1,23 @@
+package example.jpa;
+
+import javax.transaction.Transactional;
+
+public class EmployeeServiveImpl implements EmployeeService {
+	
+	private EmployeeRepo repo;
+
+	@Transactional
+	public Employee createEmployee(Employee e) {
+		// TODO Auto-generated method stub
+		Employee e1 = repo.save(e);
+		return e1;
+		
+	}
+
+	@Transactional
+	public Employee findEmployee(int id) {
+		// TODO Auto-generated method stub
+		return repo.getOne(id);
+	}
+
+}

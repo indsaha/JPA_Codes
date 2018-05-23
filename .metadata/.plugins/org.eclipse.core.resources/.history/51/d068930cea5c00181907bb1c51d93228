@@ -1,0 +1,5 @@
+package example.jpa;
+
+public class Department {
+
+}
